@@ -52,7 +52,7 @@ local function get_emphasis_by_key()
 			type = CODE_SPAN_TYPE,
 			text = opts.code.txt
 		},
-		[opts.code.key] = {
+		[opts.highlight.key] = {
 			type = HIGHLIGHT_TYPE,
 			text = opts.highlight.txt
 		},
