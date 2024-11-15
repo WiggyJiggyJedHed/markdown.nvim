@@ -20,6 +20,7 @@ local EMPHASIS_TYPE = "emphasis"
 local STRONG_TYPE = "strong_emphasis"
 local STRIKETHROUGH_TYPE = "strikethrough"
 local CODE_SPAN_TYPE = "code_span"
+local HIGHLIGHT_TYPE = "highlight"
 local EMPHASIS_DELIM_TYPE = "emphasis_delimiter"
 local CODE_SPAN_DELIM_TYPE = "code_span_delimiter"
 
@@ -28,6 +29,7 @@ local emphasis_queries = {
 	[STRONG_TYPE] = get_emphasis_query(STRONG_TYPE),
 	[STRIKETHROUGH_TYPE] = get_emphasis_query(STRIKETHROUGH_TYPE),
 	[CODE_SPAN_TYPE] = get_emphasis_query(CODE_SPAN_TYPE),
+	[HIGHLIGHT_TYPE] = get_emphasis_query(HIGHLIGHT_TYPE)
 }
 
 ---@return table<string, { type: string, text: string }>
@@ -49,6 +51,10 @@ local function get_emphasis_by_key()
 		[opts.code.key] = {
 			type = CODE_SPAN_TYPE,
 			text = opts.code.txt
+		},
+		[opts.code.key] = {
+			type = HIGHLIGHT_TYPE,
+			text = opts.highlight.txt
 		},
 	}
 end

@@ -19,6 +19,7 @@
 ---@field strong KeyToTxt
 ---@field strikethrough KeyToTxt
 ---@field code KeyToTxt
+---@field highlight KeyToTxt
 
 ---@class LinkOpts
 ---@field paste { enable: boolean }
@@ -79,6 +80,10 @@ local default_cfg = {
 		code = {
 			key = "c",
 			txt = "`",
+		},
+		highlight = {
+			key = "h",
+			txt = "==",
 		},
 	},
 	link = {
