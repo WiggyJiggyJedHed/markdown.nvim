@@ -29,7 +29,7 @@ local emphasis_queries = {
 	[STRONG_TYPE] = get_emphasis_query(STRONG_TYPE),
 	[STRIKETHROUGH_TYPE] = get_emphasis_query(STRIKETHROUGH_TYPE),
 	[CODE_SPAN_TYPE] = get_emphasis_query(CODE_SPAN_TYPE),
-	[HIGHLIGHT_TYPE] = get_emphasis_query(HIGHLIGHT_TYPE)
+	[HIGHLIGHT_TYPE] = get_emphasis_query(HIGHLIGHT_TYPE),
 }
 
 ---@return table<string, { type: string, text: string }>
